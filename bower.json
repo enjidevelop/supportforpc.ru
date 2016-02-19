@@ -1,0 +1,21 @@
+{
+  "name": "supportforpc",
+  "version": "0.1.0",
+  "homepage": "https://github.com/enjidevelop/supportforpc.ru",
+  "authors": [
+    "Kustov Oleg <enjidevelop@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "dependencies": {
+    "fotorama": "~4.6.4",
+    "jquery": "~2.2.0",
+    "jquery.maskedinput": "~1.4.1",
+    "modernizr": "~2.8.2",
+    "requirejs": "~2.1.22",
+    "webshim": "~1.15.10",
+    "fastclick": "~1.0.6"
+  }
+}
