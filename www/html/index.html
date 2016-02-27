@@ -4,11 +4,58 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <title>Jade</title>
-    </head>
+        <title>Supportforpc</title>
+        <link rel="stylesheet" href="/styles/app.css"> </head>
 
     <body>
-        <div class="block"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, soluta aspernatur iste sequi eos odit explicabo consequatur voluptates illum tempora, veniam repudiandae, laboriosam necessitatibus sunt dignissimos nostrum. Vel, sequi, fugit.</div>
+        <div class="l-wrap">
+            <div class="l-header">
+                <header class="b-header">
+                    <div class="l-logo"><img src="/img/logo.png" alt="" class="b-logo"></div>
+                    <div class="l-nav">
+                        <nav class="b-nav"><a href="#about" class="b-nav__item">О нас</a><a href="#price" class="b-nav__item">Цены</a><a href="#contacts" class="b-nav__item">Контакты</a><a href="#feedback" class="b-nav__item">Обратная связь</a></nav>
+                    </div>
+                </header>
+            </div>
+            <div class="l-gallery">
+                <div class="b-gallery j-gallery">
+                    <div data-width="100%" data-height="500" data-fit="cover" data-arrows="true" data-nav="dots" data-loop="true" data-keyboard="true" class="b-gallery__base">
+                        <div data-img="/img/slide01.jpg">
+                            <div></div>
+                        </div>
+                        <div data-img="/img/slide02.jpg">
+                            <div></div>
+                        </div>
+                        <div data-img="/img/slide03.jpg">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="l-about">
+                <div class="b-headline">О нас</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit officiis deserunt, accusamus eos rerum numquam id a suscipit odit aperiam.</p>
+                <div class="b-about"></div>
+                <div class="b-about"></div>
+                <div class="b-about"></div>
+            </div>
+            <div class="l-price">
+                <div class="b-headline">Цены</div>
+                <div class="b-price">Калькулятор</div>
+            </div>
+            <div class="l-contacts">
+                <div class="b-headline">Контакты</div>
+            </div>
+            <div class="l-feedback">
+                <div class="b-headline">Обратная связь</div>
+            </div>
+            <div class="l-footer">
+                <footer class="b-footer">
+                    <div class="b-copyrights">©2016</div>
+                </footer>
+            </div>
+        </div>
+        <script src="/scripts/lib/requirejs/require.min.js" data-main="/scripts/config.js"></script>
     </body>
 
 </html>

@@ -1,0 +1,21 @@
+.l-row {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.l-header {
+    @include container;
+    @extent .l-row;
+}
+
+.l-logo {
+    @include span(2);
+    line-height: 50px;
+}
+
+.l-nav {
+    @include span(10);
+}

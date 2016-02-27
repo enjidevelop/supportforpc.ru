@@ -1,0 +1,36 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+}
+
+body {
+    font-family: $font;
+    color: $base-font-color;
+    text-size-adjust: 100%;
+}
+
+a {
+    &[href^='tel:'],
+    &[href^='mailto:'] {
+        white-space: nowrap;
+    }
+}
+
+// Utility
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.b-ruble {
+    font-family: $font-ruble;
+}

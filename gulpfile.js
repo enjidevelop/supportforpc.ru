@@ -14,6 +14,7 @@ var spritesmith  = require('gulp.spritesmith');
 var notify       = require('gulp-notify');
 var prettify     = require('gulp-prettify');
 var typograf     = require('gulp-typograf');
+var rename       = require('gulp-rename');
 
 var onError = notify.onError('Ошибка в <%= error.plugin %>');
 
@@ -64,6 +65,7 @@ var buildCss = function() {
 // Main build task
 gulp.task('build', [
     'styles',
+    'vendor',
     'js-uglify',
     'jade'
 ]);
@@ -110,6 +112,23 @@ gulp.task('css', function() {
     return buildCss();
 });
 
+gulp.task('vendor', function vendorTask() {
+    return gulp.src(['www/scripts/lib/requirejs/require.js'], {
+        base: process.cwd() // jshint ignore:line
+    })
+        .pipe(plumber({
+            errorHandler: onError
+        }))
+        .pipe(uglify({
+            outSourceMap: false
+        }))
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(plumber.stop())
+        .pipe(gulp.dest('.'));
+});
+
 gulp.task('js-uglify', function jsTask() {
     return gulp.src(paths.dist.scripts, {
         base: paths.dist.scriptsBase
@@ -123,9 +142,9 @@ gulp.task('js-uglify', function jsTask() {
                 title   : '<%= error.plugin %>'
             })
         }))
-        .pipe(uglify({
-            outSourceMap: false
-        }))
+        // .pipe(uglify({
+        //     outSourceMap: false
+        // }))
         .pipe(plumber.stop())
         .pipe(gulp.dest(paths.build.scripts))
         .pipe(livereload());

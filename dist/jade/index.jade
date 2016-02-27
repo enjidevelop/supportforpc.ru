@@ -3,6 +3,54 @@ html(lang='ru')
     head
         meta(charset="UTF-8")
         meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
-        title Jade
+        title Supportforpc
+        link(rel="stylesheet", href="/styles/app.css")
     body
-        .block  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, soluta aspernatur iste sequi eos odit explicabo consequatur voluptates illum tempora, veniam repudiandae, laboriosam necessitatibus sunt dignissimos nostrum. Vel, sequi, fugit.
+        .l-wrap
+            .l-header
+                header.b-header
+                    .l-logo
+                        img.b-logo(src="/img/logo.png" alt="")
+                    .l-nav
+                        nav.b-nav
+                            a.b-nav__item(href="#about") О нас
+                            a.b-nav__item(href="#price") Цены
+                            a.b-nav__item(href="#contacts") Контакты
+                            a.b-nav__item(href="#feedback") Обратная связь
+            .l-gallery
+                .b-gallery.j-gallery
+                    .b-gallery__base(
+                        data-width="100%"
+                        data-height="500"
+                        data-fit="cover"
+                        data-arrows="true"
+                        data-nav="dots"
+                        data-loop="true"
+                        data-keyboard="true"
+                    )
+                        div(data-img="/img/slide01.jpg")
+                            div
+                        div(data-img="/img/slide02.jpg")
+                            div
+                        div(data-img="/img/slide03.jpg")
+                            div
+            .l-about
+                .b-headline О нас
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit officiis deserunt, accusamus eos rerum numquam id a suscipit odit aperiam.
+                .b-about
+                .b-about
+                .b-about
+            .l-price
+                .b-headline Цены
+                .b-price Калькулятор
+            .l-contacts
+                .b-headline Контакты
+            .l-feedback
+                .b-headline Обратная связь
+            .l-footer
+                footer.b-footer
+                    .b-copyrights &copy;2016
+        script(src="/scripts/lib/requirejs/require.min.js" data-main="/scripts/config.js")
+
+
+

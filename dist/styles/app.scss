@@ -1,8 +1,20 @@
-body {
-    height: 100%;
-    width: 100%;
-}
+//BASE
+@import 'base/mixins';
+@import 'base/settings';
+@import 'base/grid';
+@import 'base/normalise';
+@import 'base/breakpoints';
+@import 'base/sprites';
+@import 'base/sprites@2x';
+@import 'base/global';
 
-html {
-    height: 100%;
-}
+//fotorama
+@import '/scripts/lib/fotorama/fotorama.css';
+
+//LAYOUT
+@import 'layout/layout';
+
+//MODULE
+@import 'module/header';
+@import 'module/logo';
+@import 'module/nav';
