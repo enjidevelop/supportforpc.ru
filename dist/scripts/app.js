@@ -24,5 +24,16 @@ define('app', [
         });
     })($('.j-gallery'));
 
+    //плавный скролл
+    (function() {
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+            var id  = $(this).attr('href');
+            var top = $(id).offset().top;
+
+            $('body,html').animate({scrollTop: top}, 1000);
+        });
+    })();
+
     return {};
 });

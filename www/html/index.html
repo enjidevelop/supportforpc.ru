@@ -9,17 +9,19 @@
 
     <body>
         <div class="l-wrap">
-            <div class="l-header">
-                <header class="b-header">
-                    <div class="l-logo"><img src="/img/logo.png" alt="" class="b-logo"></div>
-                    <div class="l-nav">
-                        <nav class="b-nav"><a href="#about" class="b-nav__item">О нас</a><a href="#price" class="b-nav__item">Цены</a><a href="#contacts" class="b-nav__item">Контакты</a><a href="#feedback" class="b-nav__item">Обратная связь</a></nav>
-                    </div>
-                </header>
+            <div class="l-container">
+                <div class="l-header-row">
+                    <header class="b-header">
+                        <div class="l-logo"><img src="/img/logo.png" alt="" class="b-logo"></div>
+                        <div class="l-nav">
+                            <nav class="b-nav"><a href="#about" class="b-nav__item">О нас</a><a href="#price" class="b-nav__item">Цены</a><a href="#contacts" class="b-nav__item">Контакты</a><a href="#feedback" class="b-nav__item">Обратная связь</a></nav>
+                        </div>
+                    </header>
+                </div>
             </div>
-            <div class="l-gallery">
+            <div class="l-gallery-row">
                 <div class="b-gallery j-gallery">
-                    <div data-width="100%" data-height="500" data-fit="cover" data-arrows="true" data-nav="dots" data-loop="true" data-keyboard="true" class="b-gallery__base">
+                    <div data-width="100%" data-height="500" data-fit="cover" data-arrows="false" data-nav="dots" data-loop="true" data-keyboard="true" data-transitionduration="800" data-autoplay="true" class="b-gallery__base">
                         <div data-img="/img/slide01.jpg">
                             <div></div>
                         </div>
@@ -32,22 +34,46 @@
                     </div>
                 </div>
             </div>
-            <div class="l-about">
-                <div class="b-headline">О нас</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit officiis deserunt, accusamus eos rerum numquam id a suscipit odit aperiam.</p>
-                <div class="b-about"></div>
-                <div class="b-about"></div>
-                <div class="b-about"></div>
+            <div class="l-container l-container_is_about">
+                <div id="about" class="b-headline">О нас</div>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident aliquam quaerat libero, nulla! Ad officiis natus ea itaque voluptates, eos officia reiciendis enim vel deserunt expedita, esse ullam autem quisquam.</p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident aliquam quaerat libero, nulla! Ad officiis natus ea itaque voluptates, eos officia reiciendis enim vel deserunt expedita, esse ullam autem quisquam.</p>
+                <div class="l-about-row">
+                    <div class="l-about">
+                        <div class="b-about">
+                            <div class="b-about__logo-wrap">
+                                <div class="b-about__logo b-about__logo_is_speed"></div>
+                            </div>
+                            <div class="b-about__title">Скорость</div>
+                        </div>
+                    </div>
+                    <div class="l-about">
+                        <div class="b-about">
+                            <div class="b-about__logo-wrap">
+                                <div class="b-about__logo b-about__logo_is_exp"></div>
+                            </div>
+                            <div class="b-about__title">Опыт</div>
+                        </div>
+                    </div>
+                    <div class="l-about">
+                        <div class="b-about">
+                            <div class="b-about__logo-wrap">
+                                <div class="b-about__logo b-about__logo_is_expensive"></div>
+                            </div>
+                            <div class="b-about__title">Низкая цена</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="l-price">
-                <div class="b-headline">Цены</div>
+                <div id="price" class="b-headline">Цены</div>
                 <div class="b-price">Калькулятор</div>
             </div>
             <div class="l-contacts">
-                <div class="b-headline">Контакты</div>
+                <div id="contacts" class="b-headline">Контакты</div>
             </div>
             <div class="l-feedback">
-                <div class="b-headline">Обратная связь</div>
+                <div id="feedback" class="b-headline">Обратная связь</div>
             </div>
             <div class="l-footer">
                 <footer class="b-footer">

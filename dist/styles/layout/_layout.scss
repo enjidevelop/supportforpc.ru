@@ -6,8 +6,11 @@
     }
 }
 
-.l-header {
+.l-container {
     @include container;
+}
+
+.l-header-row {
     @extent .l-row;
 }
 
@@ -19,3 +22,16 @@
 .l-nav {
     @include span(10);
 }
+
+.l-about-row {
+    @extent .l-row;
+    padding-top: 48px;
+}
+
+.l-about {
+    @include span(4);
+    text-align: center;
+}
+
+//STATE
+@import '../state/layout';

@@ -1,0 +1,11 @@
+.b-about__logo_is_speed {
+    @include sprite('transport');
+}
+
+.b-about__logo_is_exp {
+    @include sprite('medical');
+}
+
+.b-about__logo_is_expensive {
+    @include sprite('business');
+}

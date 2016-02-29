@@ -7,26 +7,29 @@ html(lang='ru')
         link(rel="stylesheet", href="/styles/app.css")
     body
         .l-wrap
-            .l-header
-                header.b-header
-                    .l-logo
-                        img.b-logo(src="/img/logo.png" alt="")
-                    .l-nav
-                        nav.b-nav
-                            a.b-nav__item(href="#about") О нас
-                            a.b-nav__item(href="#price") Цены
-                            a.b-nav__item(href="#contacts") Контакты
-                            a.b-nav__item(href="#feedback") Обратная связь
-            .l-gallery
+            .l-container
+                .l-header-row
+                    header.b-header
+                        .l-logo
+                            img.b-logo(src="/img/logo.png" alt="")
+                        .l-nav
+                            nav.b-nav
+                                a.b-nav__item(href="#about") О нас
+                                a.b-nav__item(href="#price") Цены
+                                a.b-nav__item(href="#contacts") Контакты
+                                a.b-nav__item(href="#feedback") Обратная связь
+            .l-gallery-row
                 .b-gallery.j-gallery
                     .b-gallery__base(
                         data-width="100%"
                         data-height="500"
                         data-fit="cover"
-                        data-arrows="true"
+                        data-arrows="false"
                         data-nav="dots"
                         data-loop="true"
                         data-keyboard="true"
+                        data-transitionduration="800"
+                        data-autoplay="true"
                     )
                         div(data-img="/img/slide01.jpg")
                             div
@@ -34,19 +37,34 @@ html(lang='ru')
                             div
                         div(data-img="/img/slide03.jpg")
                             div
-            .l-about
-                .b-headline О нас
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit officiis deserunt, accusamus eos rerum numquam id a suscipit odit aperiam.
-                .b-about
-                .b-about
-                .b-about
+            .l-container.l-container_is_about
+                .b-headline#about О нас
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident aliquam quaerat libero, nulla! Ad officiis natus ea itaque voluptates, eos officia reiciendis enim vel deserunt expedita, esse ullam autem quisquam.
+
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident aliquam quaerat libero, nulla! Ad officiis natus ea itaque voluptates, eos officia reiciendis enim vel deserunt expedita, esse ullam autem quisquam.
+                .l-about-row
+                    .l-about
+                        .b-about
+                            .b-about__logo-wrap
+                                .b-about__logo.b-about__logo_is_speed
+                            .b-about__title Скорость
+                    .l-about
+                        .b-about
+                            .b-about__logo-wrap
+                                .b-about__logo.b-about__logo_is_exp
+                            .b-about__title Опыт
+                    .l-about
+                        .b-about
+                            .b-about__logo-wrap
+                                .b-about__logo.b-about__logo_is_expensive
+                            .b-about__title Низкая цена
             .l-price
-                .b-headline Цены
+                .b-headline#price Цены
                 .b-price Калькулятор
             .l-contacts
-                .b-headline Контакты
+                .b-headline#contacts Контакты
             .l-feedback
-                .b-headline Обратная связь
+                .b-headline#feedback Обратная связь
             .l-footer
                 footer.b-footer
                     .b-copyrights &copy;2016

@@ -1,4 +1,5 @@
 $sprites-2x-map : (
-  1: (0px, 0px, 0px, 0px, 50px, 45px, 102px, 45px, '/img/sprites@2x.png', '1', ),
-  2: (52px, 0px, -52px, 0px, 50px, 45px, 102px, 45px, '/img/sprites@2x.png', '2', ),
+  business: (0px, 0px, 0px, 0px, 256px, 256px, 514px, 514px, '/img/sprites@2x.png', 'business', ),
+  medical: (258px, 0px, -258px, 0px, 256px, 256px, 514px, 514px, '/img/sprites@2x.png', 'medical', ),
+  transport: (0px, 258px, 0px, -258px, 256px, 256px, 514px, 514px, '/img/sprites@2x.png', 'transport', ),
 );
