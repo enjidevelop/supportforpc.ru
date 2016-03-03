@@ -70,7 +70,7 @@
 }
 
 .l-feedback {
-    @include span(full);
+    @include span(6);
 }
 
 .l-footer-row {
@@ -85,5 +85,3 @@
     @include span(6 last);
 }
 
-//STATE
-@import '../state/layout';

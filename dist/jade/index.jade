@@ -107,8 +107,18 @@ html(lang='ru')
                             p Email: <a href="mailto:test@test.ru">test@test.ru</a>
             .l-container
                 .l-feedback-row
+                    .b-headline#feedback Обратная связь
                     .l-feedback
-                        .b-headline#feedback Обратная связь
+                        .b-feedback
+                            form(action="/ajax/feedback.php" method="POST")
+                                .b-feedback__row
+                                    label(for="feedback_name").b-feedback__label Ваше имя
+                                    input(type="text" id="feedback_name" name="feedback_name" required).b-feedback__input
+                                .b-feedback__row
+                                    label(for="feedback_phone").b-feedback__label Ваше телефон
+                                    input(type="tel" id="feedback_phone" name="feedback_phone" required).b-feedback__input
+                                .b-feedback__row
+                                    input(type="submit" value="Отправить").b-feedback__btn
             footer.b-footer
                 .l-container
                     .l-footer-row

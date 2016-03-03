@@ -15,6 +15,10 @@ var notify       = require('gulp-notify');
 var prettify     = require('gulp-prettify');
 var typograf     = require('gulp-typograf');
 var rename       = require('gulp-rename');
+var handlebars   = require('gulp-handlebars');
+var defineModule = require('gulp-define-module');
+var tap          = require('gulp-tap');
+var plumber      = require('gulp-plumber');
 
 var onError = notify.onError('Ошибка в <%= error.plugin %>');
 
@@ -27,6 +31,7 @@ paths.dist.scriptsBase = paths.distBase + '/scripts';
 paths.dist.scripts     = paths.dist.scriptsBase + '/**/*.js';
 paths.dist.stylesBase  = paths.distBase + '/styles';
 paths.dist.styles      = paths.dist.stylesBase + '/**/*.scss';
+paths.dist.tpl         = paths.dist.scriptsBase + '/**/*.hbs';
 paths.dist.jadeBase    = paths.distBase + '/jade';
 paths.dist.jade        = paths.dist.jadeBase + '/**/*.jade';
 paths.dist.sprites     = paths.distBase + '/sprites/1x/*.png';
@@ -37,6 +42,7 @@ paths.buildBase     = 'www';
 paths.build         = {};
 paths.build.scripts = paths.buildBase + '/scripts';
 paths.build.styles  = paths.buildBase + '/styles';
+paths.build.tpl     = paths.build.scripts;
 paths.build.jade    = paths.buildBase + '/html';
 
 paths.html = paths.buildBase + '/**/*.html';
@@ -66,6 +72,7 @@ var buildCss = function() {
 gulp.task('build', [
     'styles',
     'vendor',
+    'templates',
     'js-uglify',
     'jade'
 ]);
@@ -101,6 +108,33 @@ gulp.task('sprites2x', function() {
             gulp.dest(paths.buildBase + '/img'),
             gulp.dest(paths.dist.stylesBase + '/base')
         ))
+        .pipe(livereload());
+});
+
+gulp.task('templates', function templatesTask() {
+    var fileName;
+    var errorTpl = '<%= error.message %>';
+
+    return gulp.src(paths.dist.tpl)
+        .pipe(changed(paths.build.tpl, {extension: '.js'}))
+        .pipe(tap(function(file) {
+            fileName = file.relative;
+        }))
+        .pipe(plumber({
+            errorHandler: notify.onError({
+                message : function() {
+                    return errorTpl + '\n\n' + fileName;
+                },
+                title   : 'Handlebars'
+            })
+        }))
+        .pipe(handlebars())
+        .pipe(plumber.stop())
+        .pipe(defineModule('amd'))
+        .pipe(uglify({
+            outSourceMap : false
+        }))
+        .pipe(gulp.dest(paths.build.tpl))
         .pipe(livereload());
 });
 
@@ -187,6 +221,7 @@ gulp.task('watch', ['build'], function watch() {
         gulp.watch(paths.dist.sprites2x, ['sprites2x']);
         gulp.watch(paths.dist.styles,  ['css']);
         gulp.watch(paths.dist.scripts, ['js-uglify']);
+        gulp.watch(paths.dist.tpl,     ['templates']);
         gulp.watch(paths.dist.jade,    ['jade']);
 
         gulp.watch(paths.html).on('change', function(file) {

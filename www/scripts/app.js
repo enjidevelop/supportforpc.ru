@@ -9,6 +9,22 @@ define('app', [
 
     FastClick.attach(document.body);
 
+    // Подключение формы
+    (function($forms) {
+        if (!$forms.length) {
+            return;
+        }
+
+        var initForms = function initForms(Form) {
+            $forms.each(function() {
+                var form = new Form($(this));
+                form.init();
+            });
+        };
+
+        require(['app/form'], initForms);
+    })($('form').filter(':not([data-noinit])'));
+
     // Подключение галерей
     (function($gallerys) {
         if (!$gallerys.length) {

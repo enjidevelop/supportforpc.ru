@@ -7,6 +7,7 @@
 @import 'base/sprites';
 @import 'base/sprites@2x';
 @import 'base/global';
+@import 'base/animate';
 
 //fotorama
 @import '/scripts/lib/fotorama/fotorama.css';
@@ -21,4 +22,5 @@
 @import 'module/headline';
 @import 'module/about';
 @import 'module/price-table';
+@import 'module/feedback';
 @import 'module/footer';

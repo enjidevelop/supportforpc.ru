@@ -122,8 +122,15 @@
             </div>
             <div class="l-container">
                 <div class="l-feedback-row">
+                    <div id="feedback" class="b-headline">Обратная связь</div>
                     <div class="l-feedback">
-                        <div id="feedback" class="b-headline">Обратная связь</div>
+                        <div class="b-feedback">
+                            <form action="/ajax/feedback.php" method="POST">
+                                <div class="b-feedback__row"> <label for="feedback_name" class="b-feedback__label">Ваше имя</label> <input type="text" id="feedback_name" name="feedback_name" required class="b-feedback__input"> </div>
+                                <div class="b-feedback__row"> <label for="feedback_phone" class="b-feedback__label">Ваше телефон</label> <input type="tel" id="feedback_phone" name="feedback_phone" required class="b-feedback__input"> </div>
+                                <div class="b-feedback__row"> <input type="submit" value="Отправить" class="b-feedback__btn"> </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

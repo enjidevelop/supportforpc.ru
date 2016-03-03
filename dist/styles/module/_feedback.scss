@@ -1,0 +1,45 @@
+.b-feedback__row {
+    margin-bottom: 24px;
+}
+
+.b-feedback__label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.b-feedback__input {
+    @include transition(border-color, box-shadow);
+    display: block;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid gray;
+
+    &:focus {
+        outline: none;
+        border-color: $main;
+        box-shadow: 0 0 3px rgba($main, .7);
+    }
+
+    &.user-error {
+        border-color: $red;
+        box-shadow: 0 0 3px rgba($red, .7);
+    }
+}
+
+.b-feedback__btn {
+    @include transition(backrgound, color);
+    padding: 12px 40px;
+    border: 2px solid $main;
+    background: $main;
+    color: $white;
+
+    &:hover {
+        background: transparent;
+        color: $main;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+}
