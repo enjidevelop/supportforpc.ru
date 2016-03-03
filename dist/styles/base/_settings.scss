@@ -7,6 +7,12 @@ $base-font-color: $black;
 
 // TYPOGRAPHY
 // -----------------------------------
+// Include fonts
+@include font(opensans, 'opensans_regular_cyrillic/OpenSans-Regular-webfont');
+@include font(opensans-bold, 'opensans_bold_cyrillic/OpenSans-Bold-webfont');
+@include font(opensans-italic, 'opensans_italic_cyrillic/OpenSans-Italic-webfont');
+@include font(ruble, 'ruble/ruble-webfont');
+
 // Fonts name
 $font: 'opensans', sans-serif;
 $font-bold: 'opensans-bold', sans-serif;

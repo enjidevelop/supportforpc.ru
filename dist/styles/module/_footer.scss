@@ -1,0 +1,12 @@
+.b-footer {
+    background: $main;
+    padding: 30px 0;
+}
+
+.b-footer__dev {
+    text-align: right;
+
+    span {
+        color: $white;
+    }
+}

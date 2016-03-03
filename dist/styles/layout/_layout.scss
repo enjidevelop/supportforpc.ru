@@ -1,4 +1,4 @@
-.l-row {
+%l-row {
     &:after {
         content: '';
         display: block;
@@ -11,7 +11,7 @@
 }
 
 .l-header-row {
-    @extent .l-row;
+    @extend %l-row;
 }
 
 .l-logo {
@@ -23,14 +23,66 @@
     @include span(10);
 }
 
+.l-gallery-row {
+    margin-bottom: 72px;
+}
+
 .l-about-row {
-    @extent .l-row;
-    padding-top: 48px;
+    @extend %l-row;
+    margin-bottom: 96px;
 }
 
 .l-about {
     @include span(4);
     text-align: center;
+}
+
+.l-about-text {
+    @include span(full);
+    margin-bottom: 96px;
+}
+
+.l-price-row {
+    @extend %l-row;
+    margin-bottom: 96px;
+}
+
+.l-price {
+    @include span(full);
+}
+
+.l-contacts-row {
+    @extend %l-row;
+    margin-bottom: 96px;
+}
+
+.l-contacts-label {
+    @include span(6);
+}
+
+.l-contacts-txt {
+    @include span(6);
+}
+
+.l-feedback-row {
+    @extend %l-row;
+    margin-bottom: 96px;
+}
+
+.l-feedback {
+    @include span(full);
+}
+
+.l-footer-row {
+    @extend %l-row;
+}
+
+.l-footer-copyright {
+    @include span(6);
+}
+
+.l-footer-dev {
+    @include span(6 last);
 }
 
 //STATE

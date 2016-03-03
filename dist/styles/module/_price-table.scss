@@ -1,0 +1,51 @@
+.b-price-table {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+.b-price-table__item {
+    margin-bottom: 12px;
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 12px;
+        left: 0;
+        right: 0;
+        border-bottom: 3px dotted $main;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.b-price-table__service {
+    @include span(9);
+    padding-left: 0;
+}
+
+.b-price-table__price {
+    @include span(3);
+    padding-right: 0;
+    text-align: right;
+}
+
+.b-price-table__service-inner {
+    position: relative;
+    padding-right: 5px;
+    background: $white;
+    height: 24px;
+}
+
+.b-price-table__price-inner {
+    position: relative;
+    padding-left: 5px;
+    background: $white;
+    height: 24px;
+}

@@ -37,37 +37,85 @@ html(lang='ru')
                             div
                         div(data-img="/img/slide03.jpg")
                             div
-            .l-container.l-container_is_about
-                .b-headline#about О нас
-                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident aliquam quaerat libero, nulla! Ad officiis natus ea itaque voluptates, eos officia reiciendis enim vel deserunt expedita, esse ullam autem quisquam.
+            .l-container
+                    .l-about-text
+                        .b-headline#about О нас
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident aliquam quaerat libero, nulla! Ad officiis natus ea itaque voluptates, eos officia reiciendis enim vel deserunt expedita, esse ullam autem quisquam.
 
-                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident aliquam quaerat libero, nulla! Ad officiis natus ea itaque voluptates, eos officia reiciendis enim vel deserunt expedita, esse ullam autem quisquam.
-                .l-about-row
-                    .l-about
-                        .b-about
-                            .b-about__logo-wrap
-                                .b-about__logo.b-about__logo_is_speed
-                            .b-about__title Скорость
-                    .l-about
-                        .b-about
-                            .b-about__logo-wrap
-                                .b-about__logo.b-about__logo_is_exp
-                            .b-about__title Опыт
-                    .l-about
-                        .b-about
-                            .b-about__logo-wrap
-                                .b-about__logo.b-about__logo_is_expensive
-                            .b-about__title Низкая цена
-            .l-price
-                .b-headline#price Цены
-                .b-price Калькулятор
-            .l-contacts
-                .b-headline#contacts Контакты
-            .l-feedback
-                .b-headline#feedback Обратная связь
-            .l-footer
-                footer.b-footer
-                    .b-copyrights &copy;2016
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident aliquam quaerat libero, nulla! Ad officiis natus ea itaque voluptates, eos officia reiciendis enim vel deserunt expedita, esse ullam autem quisquam.
+                    .l-about-row
+                        .l-about
+                            .b-about
+                                .b-about__logo-wrap
+                                    .b-about__logo.b-about__logo_is_speed
+                                .b-about__title Скорость
+                        .l-about
+                            .b-about
+                                .b-about__logo-wrap
+                                    .b-about__logo.b-about__logo_is_exp
+                                .b-about__title Опыт
+                        .l-about
+                            .b-about
+                                .b-about__logo-wrap
+                                    .b-about__logo.b-about__logo_is_expensive
+                                .b-about__title Низкая цена
+            .l-container
+                .l-price-row
+                    .l-price
+                        .b-headline#price Цены
+                        ul.b-price-table
+                            li.b-price-table__item
+                                    .b-price-table__service
+                                        span.b-price-table__service-inner Установка Windows
+                                    .b-price-table__price
+                                        span.b-price-table__price-inner 1000 <span class="b-ruble">a</span>
+                            li.b-price-table__item
+                                    .b-price-table__service
+                                        span.b-price-table__service-inner Установка Linux
+                                    .b-price-table__price
+                                        span.b-price-table__price-inner 2000 <span class="b-ruble">a</span>
+                            li.b-price-table__item
+                                    .b-price-table__service
+                                        span.b-price-table__service-inner Удаление вирусов
+                                    .b-price-table__price
+                                        span.b-price-table__price-inner 1500 <span class="b-ruble">a</span>
+                            li.b-price-table__item
+                                    .b-price-table__service
+                                        span.b-price-table__service-inner Восстановление файлов
+                                    .b-price-table__price
+                                        span.b-price-table__price-inner 3000 <span class="b-ruble">a</span>
+                            li.b-price-table__item
+                                    .b-price-table__service
+                                        span.b-price-table__service-inner Установка драйверов
+                                    .b-price-table__price
+                                        span.b-price-table__price-inner 300 <span class="b-ruble">a</span> / шт.
+                            li.b-price-table__item
+                                    .b-price-table__service
+                                        span.b-price-table__service-inner Настройка принтера
+                                    .b-price-table__price
+                                        span.b-price-table__price-inner 900 <span class="b-ruble">a</span>
+            .l-container
+                .l-contacts-row
+                    .b-headline#contacts Контакты
+                    .l-contacts-label
+                        img.b-logo.b-logo_is_contacts(src="/img/logo.png" alt="")
+                    .l-contacts-txt
+                        .b-contacts
+                            p Санкт-Петербург
+                            p Невский пр., д.1
+                            p Телефон: <a href="tel:87777777777" class="b-line-tel">8 (777) 777-77-77</a>
+                            p Email: <a href="mailto:test@test.ru">test@test.ru</a>
+            .l-container
+                .l-feedback-row
+                    .l-feedback
+                        .b-headline#feedback Обратная связь
+            footer.b-footer
+                .l-container
+                    .l-footer-row
+                        .l-footer-copyright
+                            .b-copyrights &copy;2016
+                        .l-footer-dev
+                            .b-footer__dev Разработка сайта&nbsp;&mdash; <span>Enji</span>develop
         script(src="/scripts/lib/requirejs/require.min.js" data-main="/scripts/config.js")
 
 

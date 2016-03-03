@@ -16,6 +16,12 @@ body {
 }
 
 a {
+    color: $main;
+
+    &:hover {
+        text-decoration: none;
+    }
+
     &[href^='tel:'],
     &[href^='mailto:'] {
         white-space: nowrap;
@@ -33,4 +39,9 @@ a {
 
 .b-ruble {
     font-family: $font-ruble;
+}
+
+.b-line-tel {
+    color: inherit;
+    text-decoration: none;
 }
