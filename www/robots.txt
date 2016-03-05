@@ -1,6 +1,6 @@
 User-agent: Yandex
 Disallow: /html/*
-Host: an-metry.ru
+Host: supportforpc.ru
 
 User-agent: *
 Disallow: /html/*
